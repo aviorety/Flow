@@ -2,21 +2,11 @@ repeat
     task.wait()
 until game:IsLoaded()
 
-if isfile(`Atonium/key.lua`) then
-    if script_key then
-        writefile(`Atonium/key.lua`, script_key)
-    else
-        script_key = readfile(`Atonium/key.lua`)
-    end
-end
-
-warn(`running loader: {script_key}`)
-
 local Loader = {}
 Loader.games = {
-    [4777817887] = {
-        name = 'Blade Ball',
-        script_id = 'f8555be8e5bebb5c92efc25ad31686c7'
+    [nil] = {
+        name = nil,
+        script_id = nil
     }
 }
 
