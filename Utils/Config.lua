@@ -4,6 +4,10 @@ local Config = {}
 
 
 function Config.save(file_name: any, config: any)
+	if not isfolder(`Flow`) then
+		makefolder(`Flow`)
+	end
+
 	local flags = HttpService:JSONEncode(config)
 	writefile('Flow/'..file_name..'.lua', flags)
 end
